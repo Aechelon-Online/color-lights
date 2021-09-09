@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 470px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 5px;
+}
+
+.red, .limegreen, .blue, .yellow, .cyan, .magenta, .green, .orange, .purple {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.red {
+    background: red;
+}
+
+.limegreen {
+    background: limegreen;
+}
+
+.blue {
+    background: blue;
+}
+
+.yellow {
+    background: #ffdd00;
+}
+
+.cyan {
+    background: cyan;
+}
+.magenta {
+    background: magenta;
+}
+.green {
+    background: green;
+}
+.orange {
+    background: orange;
+}
+.purple {
+    background: purple;
+}
+
+.red.show, .blue.show, .limegreen.show, .yellow.show, .cyan.show, .magenta.show, .green.show, .orange.show, .purple.show {
+    opacity: 1;
+}
+.red.fade, .blue.fade, .limegreen.fade, .yellow.fade, .cyan.fade, .magenta.fade, .green.fade, .orange.fade, .purple.fade {
+    animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
